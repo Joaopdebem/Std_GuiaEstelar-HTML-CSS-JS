@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+    <!-- <style>
+        h1 {
+            color: blue;
+        }
+    </style> -->
+
+    <title>Guia Estelar de CSS</title>
+</head>
+
+<body>
+    <!--Formas de utilizar CSS-->
+    <!-- <div id="container" class="m-40">
+        <h1 style="color: blue;">
+            Evolua Rápido
+        </h1>
+
+        <p>
+            Descrição
+        </p>
+
+        <button>
+            Embarcar
+        </button>
+    </div> -->
+
+    <!--Regras de Cascata-->
+    <!-- <div>
+        <h1>Cascata</h1>
+
+        <h2>Fatores</h2>
+        <p>
+            <ol>
+                <li>Origem do estilo</li>
+                <li>Especificidade</li>
+                <li>Importância</li>
+            </ol>
+        </p>
+
+        <h3>Origem do estilo</h3>
+        <p>
+            Inline >> Tag style >> Tag link
+        </p>
+
+        <h3>Especificidades</h3>
+        <p>
+            É um cálculo matemático, onde, cada tipo de seletor e origem do estilo, possuem valores a serem considerados.
+        </p>
+
+        <p>
+            <ul>
+                <li>
+                    <strong>0</strong> - Universal selector, combinators e negation pseudo-class (:not());
+                </li>
+                <li>
+                    <strong>1</strong> - Element type selector e pseudo-elements (::before, ::after);
+                </li>
+                <li>
+                    <strong>10</strong> - Classes e atribute selectors ([type="radio"]);
+                </li>
+                <li>
+                    <strong>100</strong> - ID selector;
+                </li>
+                <li>
+                    <strong>1000</strong> - InLine;
+                </li>
+            </ul>
+        </p>
+
+        <h3>Regra !important</h3>
+        <p>
+            Sobrescreve todas outras regras, com a prioridade maior.
+        </p>
+
+
+    </div> -->
+
+    <!--At-rules-->
+    <!-- <div>
+        <h1>At-rules</h1>
+        <p>
+            * Está relacionado ao comportamento do CSS. <br> * Começa com sinal de '@' seguido do identificador.
+        </p>
+
+        <h2>Exemplos comuns</h2>
+        <ul>
+            <li>
+                <strong>@import</strong> - Incluir um CSS externo;
+                <ul>
+                    <li><strong><code>@import url("http://local.com/style.css")</code></strong></li>
+                </ul>
+            </li>
+            <li>
+                <strong>@media</strong> - Regras condicionais para dispositivos;
+                <ul>
+                    <li><strong><code>@media(min-width: 500px) { <br>
+                        Regras aqui <br>
+                    }</code></strong></li>
+                </ul>
+            </li>
+            <li>
+                <strong>@font-face</strong> - Fontes externas;
+                <ul>
+                    <li><strong><code>@font-face{ <br>
+                        Regras aqui <br>
+                    }</code></strong></li>
+                </ul>
+            </li>
+            <li>
+                <strong>@keyframes</strong> - Animação.
+                <ul>
+                    <li><strong><code>@keyframes nameofanimation { <br>
+                        Regras aqui <br>
+                    }</code></strong></li>
+                </ul>
+            </li>
+        </ul>
+    </div> -->
+
+    <!--Shorthand-->
+    <!-- <div>
+        <h1>Shorthand</h1>
+        <p>
+            * Junção de prioridades <br> * Resumido <br> * Legível
+        </p>
+
+        <pre>
+            <code>
+                {
+                    /* background properties */
+                    background-color: #000;
+                    background-image: url(images/bg.gif);
+                    background-repeat: no-repeat;
+                    backgroup-position: left top;
+
+                    /* background shorthand */
+                    background: #000 url(images/bg.gif) no-repeat left top;
+
+                    /* font properties */
+                    font-style: italic;
+                    font-weight: bold;
+                    font-size: .8em;
+                    line-height: 1.2;
+                    font-family: Arial, sans-serif;
+
+                    /* font shorthand */
+                    font: italic bold .8em/1.2 Arial, sans-serif;
+
+                }
+            </code>
+        </pre>
+
+        <h2>Detalhes</h2>
+        <p>
+            * Não irá considerar propriedades anteriores; <br> * Valores não especificados irão assumir o valor padrão; <br> * Geralmente, a ordem descrita não importa, mas, se houver muitas propriedades com valores semelhantes, poderemos encontrar problemas.
+        </p>
+
+        <h2>Propriedades que aceitam shorthand</h2>
+        <p>
+            animation, background, border, border-bottom, border-color, border-left, border-radius, border-right, border-style, border-top, border-width, column-rule, columns, flex, flex-flow, font, grid, grid-area, grid-column, grid-row, grid-template, list-style,
+            margin, offset, outline, overflow, padding, place-content, place-items, place-self, text-decoration, transition.
+        </p>
+
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">Propriedades que aceitam Shorthand</a>
+    </div> -->
+
+    <!--Funções-->
+    <!-- <div>
+        <h1>Funções</h1>
+
+        <p>
+            * Nome seguido de abre e fecha parentesis; <br> * Recebe argumentos.
+        </p>
+
+        <h2>Exemplos</h2>
+
+        <p>
+            <pre>
+            ```css 
+            @import url("http://urlaqui.com/style.css"); { 
+                color: rgb(255, 0, 100); 
+                width: calc(100% - 10px); 
+            }
+            </pre>
+        </p>
+    </div> -->
+
+    <!--Vendor Prefixes-->
+    <!-- <div>
+        <h1>Vendor Prefixes</h1>
+
+        <p>
+            Permite que browsers adicione `features` a fim de colocar em uso alguma novidade que vemos no CSS.
+        </p>
+
+        <h2>Exemplo</h2>
+
+        ```CSS
+        <pre>
+            <code>
+                p {
+                    -webkit-background-clip: text; /* Chrome, Safari, IOS e Andrioid */
+                    -moz-background-clip: text; /* Mozilla (Firefox) */
+                    -ms-background-clip: text; /* Internet Explorer */
+                    -o-background-clip: text; /* Opera */
+                } 
+            </code>
+        </pre>
+
+        <h2>Consultas</h2>
+
+        <a href="http://ireade.github.io/which-vendor-prefix/">iReade</a>
+        <a href="http://caniuse.com">Can i Use</a>
+    </div> -->
+
+    <!--Tipos numéricos-->
+    <!-- <div>
+        <h1>Tipos numéricos</h1>
+
+        <p>
+            <ul>
+                <li>
+                    <strong>&lt;integer&gt;</strong> - Número inteiro como -10 ou 223;
+                </li>
+                <li>
+                    <strong>&lt;number&gt;</strong> - Número decimal como -2.4, 64 ou 0.234;
+                </li>
+                <li>
+                    <strong>&lt;dimension&gt;</strong> - É um &lt;number&gt; com uma unidade junto: 90deg, 2s, 8px;
+                </li>
+                <li>
+                    <strong>&lt;percentagem&gt;</strong> - Representa a fração de outro número: 50%.
+                </li>
+            </ul>
+        </p>
+
+        <h2>Unidades comuns</h2>
+
+        <p>
+            <ul>
+                <li>
+                    <strong>&lt;lenght&gt;</strong> - Representa um valor de distância: px, em, vw;
+                </li>
+                <li>
+                    <strong>&lt;angle&gt;</strong> - Representa um ângulo: deg, rad, turn;
+                </li>
+                <li>
+                    <strong>&lt;time&gt;</strong> - Representa um tempo: s, ms;
+                </li>
+                <li>
+                    <strong>&lt;resolution&gt;</strong> - Representa resoluções para dispositivos: dpi;
+                </li>
+            </ul>
+        </p>
+    </div> -->
+
+    <!--Distâncias absolutas <length>-->
+    <!-- <div>
+        <h1>Distâncias absolutas &lt;lenght&gt;</h1>
+
+        <p>
+            São fixas e não alteram seu valor
+        </p>
+
+        <table>
+            <tr>
+                <th>Unidade</th>
+                <th>Nome</th>
+                <th>Equivalência</th>
+            </tr>
+            <tr>
+                <td>cm</td>
+                <td>Centímetros</td>
+                <td>1cm = 96px/2.54</td>
+            </tr>
+            <tr>
+                <td>in</td>
+                <td>Inches (polegadas)</td>
+                <td>1in = 2.54cm = 96px</td>
+            </tr>
+            <tr>
+                <td>px</td>
+                <td>Pixels</td>
+                <td>1px = 1/96th of 1in</td>
+            </tr>
+        </table>
+
+        <p>
+            <ul>
+                <li>O mais comum e mais utilizado é o **px**</li>
+                <li>Não recomendado usar o **cm**</li>
+            </ul>
+        </p>
+
+        <h2>Distâncias relativas</h2>
+
+        <p>
+            São relativas a algum outro valor, pode ser o elemento pai, ou root, ou o tamanho da tela.
+        </p>
+
+        <p>
+            <ul>
+                <li>Benefício: Maior adaptação aos diferentes tipos de tela;</li>
+            </ul>
+        </p>
+
+        <table>
+            <tr>
+                <th>Unidade</th>
+                <th>Relativo a</th>
+            </tr>
+            <tr>
+                <td>em</td>
+                <td>Tamanho da font pai.</td>
+            </tr>
+            <tr>
+                <td>rem</td>
+                <td>Tamanho da font do elemento raiz (root/html)</td>
+            </tr>
+            <tr>
+                <td>vw</td>
+                <td>1% da viewport width</td>
+            </tr>
+            <tr>
+                <td>vh</td>
+                <td>1% da viewport height</td>
+            </tr>
+        </table>
+    </div> -->
+
+    <!--Box Model-->
+    <!-- <div>
+        <h1>Box Model</h1>
+
+        <ul>
+            <li>
+                Fundamental para fazer layouts para a web;
+            </li>
+            <li>
+                Maior facilidade para aplicar o CSS.
+            </li>
+        </ul>
+
+        <h2>O que é?</h2>
+
+        <p>
+            Uma caixa retangular. <br> Essa caixa possui propriedades de uma caixa (2D).
+        </p>
+
+        <ul>
+            <li>
+                <strong>Tamanho</strong> - Width | height
+            </li>
+            <li>
+                <strong>Conteúdo</strong> - content
+            </li>
+            <li>
+                <strong>Bordas</strong> - border
+            </li>
+            <li>
+                <strong>Preenchimento interno</strong> - padding
+            </li>
+            <li>
+                <strong>Espaços fora da caixa</strong> - margin
+            </li>
+        </ul>
+
+        <p>
+            <strong>
+                Cada elemento na sua página, será considerado uma caixa.
+            </strong>
+        </p>
+
+    </div> -->
+
+    <!--Border e Outline-->
+    <!-- <div id="bordas">
+        <h1 class="titulo">Border e outline</h1>
+
+        <p>
+            As bordas da caixa.
+        </p>
+
+        <ul>
+            <li>
+                <strong>Value:</strong> &lt;border-style&gt; | &lt;border-width&gt; | &lt;border-color&gt;
+                <ul>
+                    <li>
+                        <em>Style:</em> solid | dotted | dashed | double | groove | ridge | inset | outset
+                    </li>
+                    <li>
+                        <em>Width:</em> &lt;lenght&gt;
+                    </li>
+                    <li>
+                        <em>Color:</em> &lt;color&gt;
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Outline</h2>
+
+        <ul>
+            <li>
+                <strong>Difere em 4 sentidos:</strong>
+                <ul>
+                    <li>
+                        Não modifica o tamanho da caixa, pois não é parte do Box Model;
+                    </li>
+                    <li>
+                        Poderá ser diferent de retangular;
+                    </li>
+                    <li>
+                        Não permite ajuste individuais;
+                    </li>
+                    <li>
+                        Mais usado pelo user agent para acessibilidade.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+
+
+
+    </div> -->
+
+    <!--Cores e Background-->
+    <!-- <div>
+        <header></header>
+        <main>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+            <div>
+                <h1>Evolua rápido como a tecnologia</h1>
+                <p> Junte-se a milhares de devs e acelere na direção dos seus objetivos </p>
+            </div>
+
+        </main>
+    </div> -->
+
+    <!--Fonts-->
+    <!-- <div>
+        <div>
+            <h1>Trabalhando com fontes</h1>
+
+            <p>Tipografia transmite mensagem</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat numquam eos aperiam dolorem at ratione aut, explicabo accusantium similique, et repellendus debitis eum aliquid tempora vero rem tempore, temporibus molestias?
+            </p>
+
+            <ul>
+                <li>negrito</li>
+                <li>tamanho</li>
+                <li>estilo</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Basic Font properties</h2>
+
+            <ul>
+                <li>font-family</li>
+                <li>font-weight</li>
+                <li>font-style</li>
+                <li>font-size</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Font Family</h2>
+
+            <ul>
+                <li>Tipo de fonte de um elemento</li>
+                <li>Lista de fontes e ordem de prioridade</li>
+                <li>inclui *fallback* font</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Web Fonts</h2>
+
+            <ul>
+                <li>Fontes do sistema x fontes da web</li>
+                <li>
+                    Como usar fontes para web?
+                    <ul>
+                        <li>@font-face</li>
+                        <li>@import</li>
+                        <li>link</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Referências</h3>
+
+            <a href="https://www.w3.org/TR/css-fonts-3/">W3</a> <br>
+            <a href="https://css-tricks.com/snippets/css/using-font-face/">CSS Tricks</a>
+        </div>
+
+        <div>
+            <h2>Font-stretch</h2>
+
+            <ul>
+                <li>Alargamento ou encolhimento da fonte</li>
+                <li>Aceita palavra-chaves como: expanded, condensed, normal</li>
+                <li>Aceita porcentagens de 50% a 200%</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Font-variant</h2>
+
+            <ul>
+                <li>Variações na apresentação fonte</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Line-height</h2>
+
+            <ul>
+                <li>Espaços entre linhas</li>
+                <li>Pode ser com unidades ou sem unidades de medida</li>
+                <li>Comuns: 1.5 </li>
+            </ul>
+        </div>
+
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

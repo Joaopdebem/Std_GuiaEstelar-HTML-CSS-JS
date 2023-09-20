@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styleFORM.css">
+
+    <title>Formulário</title>
+</head>
+
+<body>
+
+    <!--Fieldset-->
+    <!-- <div>
+        <h2>&lt;fieldset&gt;</h2>
+
+        <ul>
+            <li>Agrupamento de campos</li>
+            <li>Mesmo propósito</li>
+            <li>Semântico</li>
+            <li>Acessibilidade</li>
+        </ul>
+
+        <h2>Atributos especiais</h2>
+
+        <ul>
+            <li>disabled
+                <ul>
+                    <li>desabilita todos os elementos internos</li>
+                    <li>não serão enviados ao submeter o formulário</li>
+                </ul>
+            </li>
+            <li>form
+                <ul>
+                    <li>o ida de uma formulário ao qual esse fieldset pertence</li>
+                    <li>não precisa estar dentro do formulário</li>
+                </ul>
+            </li>
+            <li>name
+                <ul>
+                    <li>nome do grupo</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>&lt;legend&gt;</h2>
+
+        <ul>
+            <li>nome do agrupamento</li>
+            <li>primeiro elemento dentro do fieldset</li>
+        </ul>
+    </div>
+
+    <form id="contato" action="" method="POST">
+
+        <fieldset form="contato">
+            <legend>Contato</legend>
+
+            <label for="">Nome</label>
+            <input type="text">
+        </fieldset>
+
+    </form> -->
+
+    <!--Label-->
+    <!-- <div>
+        <h2>&lt;label&gt;</h2>
+
+        <ul>
+            <li>Associar e identificar uma (ou mais) tag de entrada de dados.</li>
+            <li>Acessibilidade</li>
+            <li>Você poderá clicar para mudar o foco da entrada de dados.</li>
+        </ul>
+
+        <h2>Atributos</h2>
+
+        <ul>
+            <li>for
+                <ul>
+                    <li>Para fazer a conexão entre este label e a tag de entrada de dados</li>
+                    <li>É feita via id do input</li>
+                    <li>Só funciona com elementos específicos
+                        <ul>
+                            <li>button, input, meter, output, progress, select, textarea.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <label>
+        Nome:
+        <input type="text">
+        <button>Enviar</button>
+    </label>
+
+    <label for="sobrenome">Sobrenome</label>
+    <input id="sobrenome" type="text">
+    -->
+
+    <!--Button-->
+    <!-- <div>
+        <h2>&lt;button&gt;</h2>
+
+        <ul>
+            <li>Representa um botão</li>
+            <li>Usado para enviar formulários</li>
+            <li>É estilizado pelo user agent</li>
+        </ul>
+
+        <h2>Atributos comuns</h2>
+
+        <ul>
+            <li>Type
+                <ul>
+                    <li>submit</li>
+                    <li>reset</li>
+                    <li>button</li>
+                </ul>
+            </li>
+            <li>autofocus</li>
+            <li>disabled</li>
+            <li>name</li>
+            <li>value</li>
+            <li>form</li>
+        </ul>
+    </div>
+
+
+    <form action="" id="botao">
+        <label>Reset
+            <input type="text" value="">
+            <button type="reset">Enviar</button>
+        </label>
+    </form>
+
+    <button type="submit" form="botao">Formulário</button>
+    -->
+
+    <!--Datalist-->
+    <!-- <div>
+        <h2>&lt;datalist&gt;</h2>
+
+        <ul>
+            <li>Lista de valores como sugestão a uma tag &lt;input&gt;</li>
+            <li>Valores sugestivos e não obrigatórios</li>
+            <li>Usuário poderá selecionar um dos valores, ou colocar um valor diferente da sugestão</li>
+        </ul>
+
+        <datalist id="fruitsdata">
+            <option>apple</option>
+            <option>banana</option>
+            <option>mango</option>
+            <option>orange</option>
+            <option>cherry</option>
+        </datalist>
+
+        <h2>List</h2>
+
+        <ul>
+            <li>Recebe como valor o id de um &lt;datalist&gt; residente no mesmo documento.
+            </li>
+        </ul>
+
+        <h2>Tipos de input suportados</h2>
+
+        <ul>
+            <li>text, search, url, tel, email, date, month, week, time, datetime-local, number, range e color</li>
+        </ul>
+
+        <p>
+            Valores de datalist que não são competíveis com o tipo do &lt;input&gt; não serão apresentados.
+        </p>
+
+        <h2>Tipos de input não suportados (conforme especificação)</h2>
+
+        <ul>
+            <li>hidden, password, checkbox, radio, file, ou qualquer tipo de button</li>
+        </ul>
+    </div>
+
+    <input type="text" list="fruitsdata" placeholder="Escolha uma fruta" />
+
+    <datalist id="fruitsdata">
+        <option>mango</option>
+        <option>orange</option>
+        <option>cherry</option>
+    </datalist>
+
+    <datalist id="colorsdata">
+        <option>#ff0000</option>
+        <option>#00ff00</option>
+    </datalist>
+
+    <input type="color" list="colorsdata">
+    -->
+
+    <!--Input-->
+    <!-- <div>
+        <h1>&lt;input&gt;</h1>
+
+        <ul>
+            <li>Um dos mais usados em formulários</li>
+            <li>Aceita os mais diversos tipos de dados</li>
+            <li>Um dos mais poderosos e complexos</li>
+            <li>Elevado número de combinações</li>
+        </ul>
+
+        <h2>Atributos</h2>
+
+        <ul>
+            <li>type</li>
+            <li>name</li>
+            <li>id</li>
+        </ul>
+
+        <h2>Atributos comuns</h2>
+
+        <ul>
+            <li>autocomplete</li>
+            <li>autofocus</li>
+            <li>disabled</li>
+            <li>value</li>
+            <li>readonly (quase todos)</li>
+            <li>form (quase todos)</li>
+            <li>required (quase todos)</li>
+            <li>placeholder (quase todos)</li>
+        </ul>
+    </div>
+    <div>
+        <input type="email" autocomplete="email"> <br>
+        <input type="text" autofocus> <br>
+        <input type="text" value="Texto" disabled> <br>
+        <input type="type" value="Texto" readonly> <br>
+        <br>
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" placeholder="Digite sua senha">
+    </div> -->
+
+    <!--Input type="password"-->
+    <div>
+        <h1>&lt;input type="password"&gt;</h1>
+
+        <ul>
+            <li>Colocar uma senha de maneira segura</li>
+            <li>Esconde o que está sendo digitado no campo</li>
+            <li>O estilo da apresentação do campo, depende do User Agent</li>
+        </ul>
+
+        <h2>Atributos</h2>
+
+        <ul>
+            <li>minlength / maxlength
+                <ul>
+                    <li>O número mínimo e/ou máximo de caracteres para este campo</li>
+                </ul>
+            </li>
+            <li>Size
+                <ul>
+                    <li>O número aceitável de caracteres que esse campo deverá conter</li>
+                </ul>
+            </li>
+            <li>
+                pattern
+                <ul>
+                    <li>Expressão regular para validar o que está sendo digitado no campo</li>
+                    <li>Altamente recomendado o uso de um padrão de segurança alta de senhas</li>
+                    <li>Exemplo: queremos que a senha contenha caracteres hexadecimais com o limite de no mínimo 4 e no máximo 8 caracteres
+                        <ul>
+                            <li>pattern="[0-9a-fA-F]{4,8}"</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <form action="">
+
+        <!-- <input type="password" minlength="4" maxlength="8" size="8"> -->
+
+        <input type="password" pattern="[0-9a-fA-F]{4,8}">
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+</body>
+
+</html>
