@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styleJS.css">
+
+    <title>Guia Estelar Javascript</title>
+</head>
+
+<body>
+    <!--Tipos de dados-->
+    <!-- <div>
+        <h1>Tipos de dados</h1>
+
+        <p>Conforme o ECMAScript standard temos 9 tipos de dados:</p>
+
+        <ul>
+            <li>Primitive / Primitive value</li>
+            <li>Structural</li>
+            <li>Structural Primitive</li>
+        </ul>
+
+        <h2>Primitivos</h2>
+
+        <ul>
+            <li>String</li>
+            <li>Number</li>
+            <li>Boolean</li>
+            <li>undefined</li>
+            <li>Symbol</li>
+            <li>BigInt</li>
+        </ul>
+
+        <h2>Estruturais</h2>
+
+        <ul>
+            <li>Object
+                <ul>
+                    <li>Array</li>
+                    <li>Map</li>
+                    <li>Set</li>
+                    <li>Date</li>
+                    <li>...</li>
+                </ul>
+            </li>
+            <li>Function</li>
+        </ul>
+
+        <h2>Primitivo Estrutural / Structural Root Primitive</h2>
+
+        <ul>
+            <li>null</li>
+        </ul>
+
+    </div> -->
+
+    <!--Variáveis-->
+    <!-- <div>
+        <h1>Variáveis</h1>
+
+        <ul>
+            <li>Nomes simbólicos para receber algum valor</li>
+            <li>Atalhos de código</li>
+            <li>Identificadores</li>
+            <li>3 palavras reservadas para criar uma variável
+                <ul>
+                    <li>var</li>
+                    <li>let</li>
+                    <li>const</li>
+                </ul>
+            </li>
+        </ul>
+    </div> -->
+
+    <!--Escopo-->
+    <!-- <div>
+        <h1>Scope</h1>
+
+        <ul>
+            <li>Escopo determina a visibilidade de alguma variável no JS</li>
+        </ul>
+
+        <h2>Block statement</h2>
+
+        <p>
+            <pre>
+            Vamos iniciar um bloco 
+            { 
+                ---
+                Dentro do bloco onde posso colocar qualquer código
+                ---
+            }   Aqui fechamos o bloco.
+            </pre>
+        </p>
+        <p>
+            o bloco também cria um novo escopo.
+        </p>
+
+        <h2>Var</h2>
+
+        <p>
+            O var é global e poderá funcionar fora de um escopo de bloco.
+        </p>
+
+        <p>
+            <code>console.log('> existe x antes do bloco? ', x)</code> Resultado = existe x antes do bloca? undefined
+            <pre>
+                {
+                    var x = 0
+                }
+            </pre>
+            <code>console.log('> existe x depois do bloco? ', x)</code>
+        </p>
+
+        <h2>Let e const</h2>
+
+        <p>
+            Const e let são locais e só funcionam no escopo onde foi criada.
+        </p>
+
+        <p>
+            <code>console.log('> existe y antes do bloco? ', y)</code>
+            <pre>
+                {
+                    let y = 0
+                }
+            </pre>
+            <code>console.log('> existe x depois do bloco? ', y)</code>
+        </p>
+
+        <div>
+            <h1>Escopo de função</h1>
+
+            <code>
+                <pre>
+                    let subject = 'create video'
+
+                    function createThink() {
+                        subject = "study"
+                        return subject
+                    }
+
+                    console.log(createThink(subject))
+                    console.log(subject)
+                </pre>
+            </code>
+        </div>
+
+    </div> -->
+
+    <!--Nomes de variáveis-->
+    <!-- <div>
+        <h1>Para criar nomes</h1>
+
+        <ul>
+            <li>JS é case-sensitive (sensível ao caso)</li>
+            <li>JS aceita a cadeia de caracteres Unicode</li>
+        </ul>
+
+        <ul>
+            <li>Posso:
+                <ul>
+                    <li>Iniciar com esses caracteres especiais: $ _</li>
+                    <li>Iniciar com letras</li>
+                    <li>Colocar acentos</li>
+                    <li>Letras maíusculas e minúsculas fazem diferença</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li>Não posso:
+                <ul>
+                    <li>Iniciar com números</li>
+                    <li>Colocar espaços vazios no nome</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li>Ideal:
+                <li>Criar nomes que fazem sentido</li>
+                <li>Que explique o que a variável é ou faz</li>
+                <li>camelCase</li>
+                <li>snake_case</li>
+                <li>Escrever em inglês</li>
+            </li>
+        </ul>
+
+    </div> -->
+
+    <!--Funções-->
+    <!-- <div>
+        <div class="hoisting">
+            <h1>Hoisting</h1>
+
+            <code>
+                <pre>
+                    sayMyName()
+
+                    const sayMyName = function sayMyName() {
+                        console.log('Mayk')
+                    }
+                </pre>
+            </code>
+        </div>
+
+        <div class="arrow-function">
+            <h1>Arrow function</h1>
+
+            <code>
+                <pre>
+                    const sayMyName = (name) => {
+                        console.log(name)
+                    }
+                    
+                    sayMyName('Joao')
+                </pre>
+            </code>
+
+        </div>
+
+        <div class="callback-function">
+            <h1>Callback function</h1>
+
+            <code>
+                <pre>
+                    function sayMyName(name) {
+                        console.log('antes de executar callback')
+                        name()
+                        console.log('depois de executar o callback')
+                    }
+                    
+                    sayMyName(
+                        () => {
+                            console.log('estou em uma callback')
+                        }
+                    )
+                </pre>
+            </code>
+
+        </div>
+
+        <div class="functions-buildings">
+
+            <h1>Funções contrutoras</h1>
+
+            <div>
+                <code>
+                    <pre>
+                        function Person(name) {
+                            this.name = name
+                            this.walk = function() {
+                                return this.name + " está andando."
+                            }
+                        }
+                        
+                        const joao = new Person("Joao")
+                        const mayk = new Person("Mayk")
+                        console.log(joao.walk())
+                        console.log(mayk.walk())
+                    </pre>
+                </code>
+            </div>
+
+        </div>
+
+    </div> -->
+
+    <!--Manipulação-->
+    <!-- <div>
+        <div class="typer-conversion">
+            <h1>Typer conversion</h1>
+
+            <code>
+                <pre>
+                    let string = "123"
+                    console.log(Number(string))
+                    let number = 321
+                    console.log(String(number))
+                </pre>
+            </code> <pre>
+                    let word = "Paralelepipedo"
+                    console.log(word.length)
+                    let number = 1234
+                    console.log(String(number).length)
+                </pre>
+            </code>
+        </div>
+
+        <div class="conversion-format">
+            <h1>Alterações de formatação</h1>
+
+            <code>
+                <pre>
+                    let number = 30323.2323141
+                    console.log(number.toFixed(2).replace(".", ","))
+
+                    let word = "Programar é muito bacana!"
+                    console.log(word.toLowerCase().toUpperCase())
+
+                    let phrase = "Eu quero viver!"
+                    console.log(phrase.includes("viver"))
+
+                    // Replace utilizado para substituição
+                    // toFixed para fixar quantidades de casas decimais.
+                    // toUpper / toLower para colocar tudo em letra maiuscula ou minuscula
+                    // Include para verificar se tem uma palavra na string
+                </pre>
+            </code>
+        </div>
+
+        <div class="string-array">
+            <h1>Manipulando string e Arrays</h1>
+
+            <code>
+                <pre>
+                    let phrase = "Eu quero viver o Amor!"
+                    let myArray = phrase.split(" ")
+                    let phraseWithUnderscore = myArray.join("_")
+                    console.log(phraseWithUnderscore)
+
+
+                    // split transforma em array
+                    // join transforma novamente para string
+                </pre>
+            </code>
+
+            <code>
+                <pre>
+                    let myArray = new Array('a', 'b', 'c')
+                    console.log(myArray)
+
+                    // Criar array com construtor
+                </pre>
+            </code>
+
+            <code>
+                <pre>
+                    let word = "manipulação"
+                    console.log(Array.from(word))
+
+                    // Transformar uma string em um array
+                </pre>
+            </code>
+
+            <code>
+                <pre>
+                    let techs = ["html", "css", "js"]
+
+                    //adicionar um item no fim
+                    techs.push("nodejs");
+                    //adicionar no começo
+
+                    techs.unshift("sql");
+                    //remover do fim
+
+                    techs.pop();
+                    //remover do começo
+
+                    techs.shift();
+                    //pegar somente alguns elementos do array
+
+                    console.log(techs.slice(1, 3));
+                    //remover 1 ou mais itens em qualquer posição do array
+                    //encontrar a posição de um elemento no array
+
+                    techs.splice(1, 2);
+                    //encontrar a posição de um elemento no array
+
+                    let index = techs.indexOf('css')
+                    techs.splice(index, 1)
+
+                    console.log(techs)                  
+                </pre>
+            </code>
+        </div>
+
+        <div class="falsy-truthy">
+            <h1>Conversion  e Coersion</h1>
+            <code>
+                <pre>
+                    // Type conversion (typecasting) vs Type coersion
+
+                    // Type conversion = Sou eu convertendo um formato para outro
+                    // Type coersion   = Javascript convertando por baixo dos panos
+
+                    /*
+                        FALSY
+                        Quando um valor e considerado false em contextos onde um booleano e obrigatorio (condicionais e loops)
+
+                        false
+                        0
+                        -0
+                        ""
+                        null
+                        undefined
+                        NaN
+                    */
+
+                    console.log(0 ? 'verdadeiro' : 'falso')
+
+
+                    /*
+                        TRUTHY
+                        Quando um valor e considerado true em contextos onde um booleano e obrigatorio
+                        (condicionais e loops)
+
+                        true
+                        {}
+                        []
+                        1
+                        3.23
+                        "0"
+                        "false"
+                        -1
+                        Infinity
+                        -Infinity
+                    */
+
+                    console.log("0" ? 'verdadeiro' : 'falso')
+                </pre>
+            </code>
+        </div>
+    </div> -->
+
+    <!--Expressões e Operadores-->
+    <!-- <div>
+        <div class="term-new">
+            <h1>Termo New</h1>
+
+            <code>
+                <pre>
+                    //let name = new String('Mayk')
+                    //name.surName = "Brito"
+                    //let age = new Number(23)
+                    //console.log(name, age)
+
+                    let date = new Date('2020-12-01')
+                    console.log(date.__proto__)
+                </pre>
+            </code>
+        </div>
+
+        <div class="op-unarys">
+            <h1>Operadores Unários</h1>
+            <code>
+                <pre>
+                    /*
+                        Operadores unários
+                        typeOf
+                        delete
+                    */
+
+                    const person = {
+                        name: 'Mayk',
+                        age: 25,
+                    }
+                    delete person.age
+
+                    console.log(person)
+                </pre>
+            </code>
+        </div>
+
+        <div class="op-aritmetics">
+            <h1>Operadores aritméticos</h1>
+            <code>
+                <pre>
+                    // Operadores Aritiméticos
+
+                    // multiplicação *
+                    console.log(3 * 5)
+
+                    // divisão /
+                    console.log(3 / 5)
+
+                    // soma +
+                    console.log(3 + 5)
+
+                    // subtração -
+                    console.log(3 - 5)
+
+                    // resto da divisão %
+                    let remainder
+                    remainder = 11 % 7
+                    console.log(remainder)
+
+                    // incremento ++
+                    let increment = 2
+                    increment++
+                    console.log(increment)
+
+                    // decremento --
+                    let decrement = 2
+                    console.log(--decrement)
+
+                    // exponencial **
+                    console.log(3 ** 3)
+                </pre>
+            </code>
+
+            <code>
+                <pre>
+                    // Grouping operator ( )
+
+                    let total = (2 + 3) * 5
+                    console.log(total)
+                </pre>
+            </code>
+        </div>
+
+        <div class="op-especials">
+            <h1>Operadores de comparação e diferença</h1>
+            <code>
+                <pre>
+                    // Operadores de comparação
+
+                    // Irá comparar valores e retornar um Boolean como resposta à comparação
+
+                    let one = 1
+                    let two = 2
+
+                    // == igual a
+                    console.log(two == 1)
+                    console.log(one == "1")
+
+                    // != diferente de 
+                    console.log(one != two)
+                    console.log(one != 1)
+                    console.log(one != "1")         
+                </pre>
+            </code>
+
+            <code>
+                <pre>
+                    // Estritamente igual ou diferente
+
+                    // Irá comparar valores e retornar um Boolean como resposta à comparação
+
+                    let one = 1
+                    let two = 2
+
+                    // === estritamente igual a
+                    console.log(one === "1")
+                    console.log(one === 1)
+
+                    // != estritament diferente de
+                    console.log(two !== "2")
+                    console.log(two !== 2)
+                </pre>
+            </code>
+
+            <code>
+                <pre>
+                    // Comparação menor ou maior
+
+                    // Irá comparar valores e retornar um Boolean como resposta à comparação
+
+                    let one = 1
+                    let two = 2
+
+                    // > maior que
+                    console.log(one > two)
+
+                    // >= maior igual a
+                    console.log(one >= 1)
+                    console.log(two >= 1)
+
+                    // < menor que
+                    console.log(one < two)
+
+                    // <= menor igual a
+                    console.log(one <= two)
+                    console.log(one <= 1)
+                    console.log(one <= 0)
+                </pre>
+            </code>
+        </div>
+
+        <div class="op-ternary">
+            <h1>Operador ternarios</h1>
+
+            <code>
+                <pre>
+                    // Operador Condiocional ( Ternario)
+
+                    // Dependendo da condicao, nos receberemos valores diferente
+
+                    // Condicao entao valor 1 se nao valor 2\
+                    // condition ? value1 : value2
+
+                    // Exemplos
+                    // Cafe da manha top
+                    let pao = true
+                    let queijo = false
+
+                    // const niceBreakfast = pao && queijo ? 'Cafe top' : 'Cafe ruim'
+                    const niceBreakfast = pao || queijo ? 'Cafe top' : 'Cafe ruim'
+
+                    console.log(niceBreakfast)
+
+                    // Maior de 18
+                    let age = 17
+                    const canDrive = age >= 18 ? 'can drive' : "can't drive"
+
+                    console.log(canDrive)
+                </pre>
+            </code>
+        </div>
+
+        <div class="op-strings">
+            <h1>Operador de String</h1>
+
+            <code>
+                <pre>
+                    // Operador de String (String operator)
+
+                    // comparison (comparacao)
+                    console.log('a' == 'a')
+
+                    // concatenation (concatenacao)
+                    // Retorna a uniao de duas strings
+                    let alpha = 'alpha'
+                    console.log(alpha += 'bet' + 's')
+                </pre>
+            </code>
+        </div>
+
+        <div class="op-precedence">
+            <h1>Operator precedence</h1>
+
+            <code>
+                <pre>
+                    /*
+                        Operator precedence
+                            Precedencia de Operadores
+    
+                    * grouping                  ()
+                    * negacao e incremento      ! ++ --
+                    * multiplicacao e divisao   * /
+                    * adicao e subtracao        + -
+                    * relacional                < <= > >=c
+                    * igualdade                 == != === !==
+                    * AND                       &&
+                    * OR                        ||
+                    * condicional               ?:
+                    * assignment                = += -= *=
+
+
+                    */
+                </pre>
+            </code>
+        </div>
+
+    </div> -->
+
+    <!--Controle de Fluxo-->
+    <!-- <div>
+        <div class="if-else">
+            <h1>if...else</h1>
+
+            <code>
+                <pre>
+                    // if...else
+
+                    let temperature = 37
+                    let highTemperature = temperature >= 37.5
+                    let mediumTemperature = temperature < 37.5 && temperature >= 37
+
+
+                    if (highTemperature) {
+                        console.log("Você está com febre alta")
+                    } else if (mediumTemperature) {
+                        console.log("Você está com febre")
+                    } else {
+                        console.log("Você está saudável")
+                    }
+                </pre>
+            </code>
+        </div>
+
+        <div class="switch">
+            <h1>Switch</h1>
+
+            <code>
+                <pre>
+                    // switch
+
+                    let expression = 'a'
+
+                    switch (expression) {
+                        case 'a':
+                            // código
+                            console.log('a')
+                            break
+                        case 'b':
+                            // código expressao b
+                            console.log('b')
+                            break
+                        default:
+                            console.log('default')
+                            break
+                    }
+                </pre>
+            </code>
+
+            <code>
+                <pre>
+                    // switch
+
+                    function calculate(number1, operator, number2) {
+                        let result
+
+                        switch (operator) {
+                            case '+':
+                                result = number1 + number2
+                                break
+                            case '-':
+                                result = number1 - number2
+                                break
+                            case '*':
+                                result = number1 * number2
+                                break
+                            case '/':
+                                result = number1 / number2
+                                break
+                            default:
+                                console.log('não implementado')
+                                break
+                        }
+
+                        return result
+                    }
+
+                    console.log(calculate(4, '*', 2))
+                </pre>
+            </code>
+
+        </div>
+
+        <div class="throw">
+            <h1></h1>
+
+            <code>
+                <pre>
+                    // Throw
+
+                    function sayMyName(name = '') {
+                        if (name === '') {
+                            throw 'Nome é necessário'
+                        }
+
+                        console.log(name)
+                    }
+
+
+                    // try...catch
+
+                    try {
+                        sayMyName('Joao')
+                    } catch (e) {
+                        console.log(e)
+                    }
+
+                    console.log('Após o try/catch')
+                </pre>
+            </code>
+        </div>
+
+        <div class="for">
+            <h1>Estrutura de repetição 'for'</h1>
+
+            <code>
+                <pre>
+                    // Estrutura de repetição  
+                    // for
+
+                    for (let i = 10; i > 0; i--) {
+                        if (i === 5) {
+                            continue;
+                        }
+                        console.log(i)
+                    }
+                </pre>
+            </code>
+        </div>
+
+        <div class="while">
+            <h1>Estrutura de repetição 'while'</h1>
+
+            <code>
+                <pre>
+                    // Estrutura de repetição 
+                    // while
+
+                    let i = 2500;
+                    while (i > 10) {
+                        console.log(i)
+
+                        i /= 35;
+                        break;
+                    }
+                </pre>
+            </code>
+        </div>
+
+        <div class="for-of">
+            <h1>Estrutura de repetição 'for...of'</h1>
+
+            <code>
+                <pre>
+                    // for...of
+
+                    let name = 'Mayk'
+                    let names = ['João', 'Paulo', 'Pedro']
+
+                    for (let char of names) {
+                        console.log(char)
+                    }
+                </pre>
+            </code>
+        </div>
+
+        <div class="for...in">
+            <h1>Estrutura de repetição 'for...in'</h1>
+
+            <code>
+                <pre>
+                    // for...in
+
+                    let person = {
+                        name: 'John',
+                        age: 30,
+                        weight: 88.6
+                    }
+
+                    for (let property in person) {
+                        console.log(property)
+                        console.log(person[property])
+                    }
+                </pre>
+            </code>
+        </div>
+
+    </div> -->
+
+    <script src="./scriptJS.js"></script>
+
+</body>
+
+</html>

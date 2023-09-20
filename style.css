@@ -1,0 +1,97 @@
+/* {
+    margin: 0;
+}
+
+#container {
+    width: 200px;
+}
+
+.m-40 {
+    margin: 40px;
+}
+
+h1,h2 {
+    color: red;
+    font-size: 60px;
+    background-color: gray;
+} */
+
+
+/* Border e outline */
+
+
+/*
+.titulo {
+     Shorthand 
+    border-top: solid 2px;
+     top | right | bottom | left 
+     Style 
+    border: solid;
+     Width <lenght> | style 
+    border: 2px dotted;
+     Style | color 
+    border: outset #f33;
+     Width | Style | Color  
+    border: medium dashed green;
+     Outline 
+    outline: yellow 4px solid;
+}*/
+
+
+/* Cores e background
+
+* {
+    margin: 0;
+}
+
+
+ header {
+    height: 100px;
+    border: 7px dashed red;
+    padding: 16px;
+    background-color: rgb(55, 100, 50);
+    background-image: url(https://thumbs.dreamstime.com/b/css-concept-random-parts-program-code-programming-abstract-technology-background-software-developer-computer-script-153537880.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    background-clip: content-box;
+}
+
+
+main {
+    color: purple;
+    background-color: rgb(55, 100, 50);
+    background-image: url(https://thumbs.dreamstime.com/b/css-concept-random-parts-program-code-programming-abstract-technology-background-software-developer-computer-script-153537880.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    background-clip: content-box;
+    background-attachment: fixed;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 0, 0, 0.2)), url(https://thumbs.dreamstime.com/b/css-concept-random-parts-program-code-programming-abstract-technology-background-software-developer-computer-script-153537880.jpg) no-repeat right top / 400px border-box content-box fixed;
+}
+*/
+
+
+/* Fontes e Texto 
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-transform: lowercase;
+    text-decoration: underline dotted yellow;
+    text-align: center;
+    text-shadow: 1px 1px 1px red, 1px 2px 3px purple;
+}
+
+ul {
+    font-family: 'Lato', sans-serif;
+    font-stretch: 50%;
+    font-variant: small-caps;
+}
+*/
